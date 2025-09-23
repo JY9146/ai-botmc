@@ -1,0 +1,11 @@
+{
+  "daisybell": {
+    "subtitle": "subtitles.daisybell",
+    "sounds": [
+      {
+        "name": "ai_bot:daisy_bell",
+        "stream": true
+      }
+    ]
+  }
+}

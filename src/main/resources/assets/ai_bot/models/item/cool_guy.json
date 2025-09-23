@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "ai_bot:item/stockimageguy"
+  },
+  "render_type": "translucent"
+}

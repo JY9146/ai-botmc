@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "ai_bot:item/pizzaithink"
+  },
+  "render_type": "translucent"
+}

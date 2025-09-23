@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ai_bot:block/dog"
+    }
+  }
+}

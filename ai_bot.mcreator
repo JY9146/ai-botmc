@@ -1,0 +1,238 @@
+{
+  "mod_elements": [
+    {
+      "name": "AIBot",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ai_bot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ai_bot/entity/AIBotEntity.java",
+          "src/main/java/net/mcreator/ai_bot/client/renderer/AIBotRenderer.java",
+          "src/main/resources/assets/ai_bot/models/item/ai_bot_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "AIBotOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ai_bot_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ai_bot/procedures/AIBotOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AITalkBack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ai_talk_back",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ai_bot/procedures/AITalkBackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "text",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CoolGuy",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cool_guy",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ai_bot/blockstates/cool_guy.json",
+          "src/main/resources/assets/ai_bot/models/block/cool_guy.json",
+          "src/main/resources/data/ai_bot/loot_tables/blocks/cool_guy.json",
+          "src/main/java/net/mcreator/ai_bot/block/CoolGuyBlock.java",
+          "src/main/resources/assets/ai_bot/models/item/cool_guy.json"
+        ]
+      }
+    },
+    {
+      "name": "Dog",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dog",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ai_bot/block/DogBlock.java",
+          "src/main/resources/assets/ai_bot/models/block/dog.json",
+          "src/main/resources/data/ai_bot/loot_tables/blocks/dog.json",
+          "src/main/resources/assets/ai_bot/models/item/dog.json",
+          "src/main/resources/assets/ai_bot/blockstates/dog.json"
+        ]
+      }
+    },
+    {
+      "name": "Pizza",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pizza",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/ai_bot/blockstates/pizza.json",
+          "src/main/resources/assets/ai_bot/models/block/pizza.json",
+          "src/main/java/net/mcreator/ai_bot/block/PizzaBlock.java",
+          "src/main/resources/assets/ai_bot/models/item/pizza.json",
+          "src/main/resources/data/ai_bot/loot_tables/blocks/pizza.json"
+        ]
+      }
+    },
+    {
+      "name": "AIBotEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ai_bot_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ai_bot/procedures/AIBotEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AiBotRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ai_bot_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/ai_bot/recipes/ai_bot.json"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "AiRespond",
+      "type": "logic",
+      "scope": "world",
+      "value": "false"
+    }
+  ],
+  "sound_elements": [
+    {
+      "name": "daisybell",
+      "files": [
+        "daisy_bell"
+      ],
+      "category": "music",
+      "subtitle": "Daisy Daisy Give Me Your Answer Do"
+    }
+  ],
+  "tag_elements": {
+    "BLOCKS:minecraft:replaceable": [
+      "~CUSTOM:Pizza",
+      "~CUSTOM:Dog",
+      "~CUSTOM:CoolGuy"
+    ]
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "subtitles.beautifulbeautifulbeautiful": "So Beautiful",
+      "item.ai_bot.ai_bot_spawn_egg": "AI Bot Spawn Egg",
+      "subtitles.knarfysound6": "Today will be... BREAKING MINECRAFT WITH YOUR DUMB IDEAS!!!",
+      "subtitles.cavemanfilmswhateveryouwant": "Whatever you want!",
+      "subtitles.knarfysound5": "ToDaY i\u0027M BrEaKiNg MiNeCrAfT WiTh YoUr dUmB iDEaS",
+      "subtitles.defnotarickrollatall": "Definently not a rickroll...",
+      "block.youtubers_natural_disasters.trash": "Trash",
+      "subtitles.knarfysound7": "And Today We\u0027ll Be Breaking Minecraft With Your Dumb Ideas",
+      "subtitles.bossbattle2music": "Chat We\u0027re Gaming",
+      "subtitles.defnotrickroll": "Definently not a rickroll...",
+      "subtitles.daisybell": "Daisy Daisy Give Me Your Answer Do",
+      "subtitles.cragdynasubscribe": "Crag says... SUBSCRIBE!",
+      "item_group.youtubers_natural_disasters.natural_disasters": "Natural Disasters",
+      "block.ai_bot.cool_guy": "Cool Guy",
+      "subtitles.thatswhatilike": "JUMP IN THE CADILLAC",
+      "subtitles.youeatcows": "Y O U E A T C O W S",
+      "item.youtubers_natural_disasters.test_sinkhole_summoner": "Test Sinkhole Summoner",
+      "entity.youtubers_natural_disasters.wild_fire": "Wildfire",
+      "subtitles.cragdynadeath": "RIP Crag",
+      "item.youtubers_natural_disasters.wild_fire_summoner": "Wildfire Summoner",
+      "biome.youtubers_natural_disasters.trash_island": "Trash Island",
+      "item.youtubers_natural_disasters.tornado_summoner": "Tornado Summoner",
+      "subtitles.technoboss": "You\u0027re In Trouble Now",
+      "subtitles.technobladeneverdies": "Technoblade Never Dies",
+      "subtitles.thatswhatiliketommy": "JUMP IN THE CADILLAC",
+      "item.pollution_mod.ai_bot_spawn_egg": "AI Bot Spawn Egg",
+      "entity.ai_bot.ai_bot": "AI Bot",
+      "entity.youtubers_natural_disasters.test_of_sinkhole_entity": "Test Sinkhole Entity",
+      "subtitles.talonmcscream": "AHHHHHHHHH",
+      "block.ai_bot.dog": "Dog",
+      "block.ai_bot.pizza": "Pizza",
+      "subtitles.youjustlostthegame": "You Just Lost The Game",
+      "subtitles.knarfysound2": "Today... I\u0027m Breaking Minecraft With Your DUMB IDEAS!",
+      "subtitles.knarfysound1": "Today I\u0027m Breaking Minecraft With Your Dumb Ideas",
+      "subtitles.knarfysound4": "TODAY I\u0027M BREAKING MINECRAFT WITH YOUR DUMB IDEAS",
+      "subtitles.knarfysound3": "Today I\u0027m Breaking Minecraft With Your Dumb Ideas!!",
+      "entity.pollution_mod.ai_bot": "AI Bot"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "ai_bot",
+    "modName": "AI Bot",
+    "version": "1.0",
+    "description": "The future of artifical intelegence in our world, brought into Minecraft!",
+    "author": "JY9146, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "MIT License",
+    "serverSideOnly": false,
+    "modPicture": "robotguy",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "Special thanks to Vini2003 and CorgiTaco for creating the mods this mod is based off of, their amazing and you should check out their work! Thanks to Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.ai_bot"
+  },
+  "mcreatorVersion": 202400452410
+}

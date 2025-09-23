@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "aba",
+    " c ",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_block"
+    },
+    "b": {
+      "item": "minecraft:emerald_block"
+    },
+    "c": {
+      "item": "minecraft:redstone_block"
+    }
+  },
+  "result": {
+    "item": "ai_bot:ai_bot_spawn_egg",
+    "count": 1
+  }
+}

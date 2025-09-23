@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "ai_bot:block/stockimageguy",
+    "particle": "ai_bot:block/stockimageguy"
+  },
+  "render_type": "solid"
+}
