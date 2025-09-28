@@ -116,7 +116,7 @@ public class AITalkBackProcedure {
 					});
 				}
 			} else if ((text).equals("Can you give me a item?") || (text).equals("Can you give me a item") || (text).equals("can you give me a item")) {
-				Random = Mth.nextInt(RandomSource.create(), 1, 5);
+				Random = Mth.nextInt(RandomSource.create(), 1, 11);
 				if (Random == 1) {
 					AiBotMod.queueServerWork(Mth.nextInt(RandomSource.create(), 4, 12), () -> {
 						if (!world.isClientSide() && world.getServer() != null)
@@ -153,6 +153,66 @@ public class AITalkBackProcedure {
 							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("Sure here is a" + ("\n" + "NETHERITE INGOT"))), false);
 						if (world instanceof ServerLevel _level) {
 							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Items.FLINT));
+							entityToSpawn.setPickUpDelay(10);
+							_level.addFreshEntity(entityToSpawn);
+						}
+					});
+				} else if (Random == 5) {
+					AiBotMod.queueServerWork(Mth.nextInt(RandomSource.create(), 4, 12), () -> {
+						if (!world.isClientSide() && world.getServer() != null)
+							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("Sure here is a" + ("\n" + "COMMAND BLOCK"))), false);
+						if (world instanceof ServerLevel _level) {
+							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Blocks.ORANGE_CONCRETE));
+							entityToSpawn.setPickUpDelay(10);
+							_level.addFreshEntity(entityToSpawn);
+						}
+					});
+				} else if (Random == 6) {
+					AiBotMod.queueServerWork(Mth.nextInt(RandomSource.create(), 4, 12), () -> {
+						if (!world.isClientSide() && world.getServer() != null)
+							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("Sure here is a" + ("\n" + "LAPIS LAZULI"))), false);
+						if (world instanceof ServerLevel _level) {
+							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Items.BLUE_DYE));
+							entityToSpawn.setPickUpDelay(10);
+							_level.addFreshEntity(entityToSpawn);
+						}
+					});
+				} else if (Random == 7) {
+					AiBotMod.queueServerWork(Mth.nextInt(RandomSource.create(), 4, 12), () -> {
+						if (!world.isClientSide() && world.getServer() != null)
+							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("Sure here is a" + ("\n" + "EMERALD"))), false);
+						if (world instanceof ServerLevel _level) {
+							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Blocks.GREEN_CANDLE));
+							entityToSpawn.setPickUpDelay(10);
+							_level.addFreshEntity(entityToSpawn);
+						}
+					});
+				} else if (Random == 8) {
+					AiBotMod.queueServerWork(Mth.nextInt(RandomSource.create(), 4, 12), () -> {
+						if (!world.isClientSide() && world.getServer() != null)
+							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("Sure here is a" + ("\n" + "BLAZE ROD"))), false);
+						if (world instanceof ServerLevel _level) {
+							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Items.TORCH));
+							entityToSpawn.setPickUpDelay(10);
+							_level.addFreshEntity(entityToSpawn);
+						}
+					});
+				} else if (Random == 9) {
+					AiBotMod.queueServerWork(Mth.nextInt(RandomSource.create(), 4, 12), () -> {
+						if (!world.isClientSide() && world.getServer() != null)
+							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("Sure here is a" + ("\n" + "ENDER PEARL"))), false);
+						if (world instanceof ServerLevel _level) {
+							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Items.HEART_OF_THE_SEA));
+							entityToSpawn.setPickUpDelay(10);
+							_level.addFreshEntity(entityToSpawn);
+						}
+					});
+				} else if (Random == 10) {
+					AiBotMod.queueServerWork(Mth.nextInt(RandomSource.create(), 4, 12), () -> {
+						if (!world.isClientSide() && world.getServer() != null)
+							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("Sure here is a" + ("\n" + "OBSIDIAN BLOCK"))), false);
+						if (world instanceof ServerLevel _level) {
+							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Blocks.BLACKSTONE));
 							entityToSpawn.setPickUpDelay(10);
 							_level.addFreshEntity(entityToSpawn);
 						}

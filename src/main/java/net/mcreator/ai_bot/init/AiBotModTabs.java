@@ -23,6 +23,7 @@ public class AiBotModTabs {
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
 			tabData.accept(AiBotModItems.AI_BOT_SPAWN_EGG.get());
+			tabData.accept(AiBotModItems.MOBILITY_CAR_SPAWN_EGG.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.OP_BLOCKS) {
 			if (tabData.hasPermissions()) {
 				tabData.accept(AiBotModBlocks.COOL_GUY.get().asItem());

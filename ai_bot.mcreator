@@ -143,6 +143,76 @@
           "src/main/resources/data/ai_bot/recipes/ai_bot.json"
         ]
       }
+    },
+    {
+      "name": "MobilityCar",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mobility_car",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ai_bot/entity/MobilityCarEntity.java",
+          "src/main/java/net/mcreator/ai_bot/client/renderer/MobilityCarRenderer.java",
+          "src/main/resources/assets/ai_bot/models/item/mobility_car_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "MobilityCarOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mobility_car_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ai_bot/procedures/MobilityCarOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MobilityCarEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mobility_car_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ai_bot/procedures/MobilityCarEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -151,6 +221,12 @@
       "type": "logic",
       "scope": "world",
       "value": "false"
+    },
+    {
+      "name": "CarMoves",
+      "type": "logic",
+      "scope": "world",
+      "value": "true"
     }
   ],
   "sound_elements": [
@@ -197,6 +273,7 @@
       "item.youtubers_natural_disasters.tornado_summoner": "Tornado Summoner",
       "subtitles.technoboss": "You\u0027re In Trouble Now",
       "subtitles.technobladeneverdies": "Technoblade Never Dies",
+      "entity.ai_bot.mobility_car": "Mobility Car",
       "subtitles.thatswhatiliketommy": "JUMP IN THE CADILLAC",
       "item.pollution_mod.ai_bot_spawn_egg": "AI Bot Spawn Egg",
       "entity.ai_bot.ai_bot": "AI Bot",
@@ -204,6 +281,7 @@
       "subtitles.talonmcscream": "AHHHHHHHHH",
       "block.ai_bot.dog": "Dog",
       "block.ai_bot.pizza": "Pizza",
+      "item.ai_bot.mobility_car_spawn_egg": "Mobility Car Spawn Egg",
       "subtitles.youjustlostthegame": "You Just Lost The Game",
       "subtitles.knarfysound2": "Today... I\u0027m Breaking Minecraft With Your DUMB IDEAS!",
       "subtitles.knarfysound1": "Today I\u0027m Breaking Minecraft With Your Dumb Ideas",

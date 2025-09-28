@@ -32,7 +32,7 @@ public class AIBotRenderer extends MobRenderer<AIBotEntity, Modelaibot<AIBotEnti
 			@Override
 			public void setupAnim(AIBotEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 				this.root().getAllParts().forEach(ModelPart::resetPose);
-				this.animateWalk(aibotAnimation.animation, limbSwing, limbSwingAmount, 1f, 1f);
+				this.animateWalk(aibotAnimation.animation, limbSwing, limbSwingAmount, 20f, 1f);
 			}
 		};
 

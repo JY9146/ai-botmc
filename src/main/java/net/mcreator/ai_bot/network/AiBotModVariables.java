@@ -54,6 +54,7 @@ public class AiBotModVariables {
 	public static class WorldVariables extends SavedData {
 		public static final String DATA_NAME = "ai_bot_worldvars";
 		public boolean AiRespond = false;
+		public boolean CarMoves = true;
 
 		public static WorldVariables load(CompoundTag tag) {
 			WorldVariables data = new WorldVariables();
@@ -63,11 +64,13 @@ public class AiBotModVariables {
 
 		public void read(CompoundTag nbt) {
 			AiRespond = nbt.getBoolean("AiRespond");
+			CarMoves = nbt.getBoolean("CarMoves");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.putBoolean("AiRespond", AiRespond);
+			nbt.putBoolean("CarMoves", CarMoves);
 			return nbt;
 		}
 
