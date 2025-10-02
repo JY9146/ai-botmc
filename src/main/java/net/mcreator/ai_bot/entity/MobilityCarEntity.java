@@ -28,6 +28,7 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.ai_bot.procedures.MobilityCarOnEntityTickUpdateProcedure;
+import net.mcreator.ai_bot.procedures.MobilityCarEntityDiesProcedure;
 import net.mcreator.ai_bot.init.AiBotModEntities;
 
 public class MobilityCarEntity extends Monster {
@@ -89,6 +90,12 @@ public class MobilityCarEntity extends Monster {
 		if (damagesource.is(DamageTypes.WITHER) || damagesource.is(DamageTypes.WITHER_SKULL))
 			return false;
 		return super.hurt(damagesource, amount);
+	}
+
+	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		MobilityCarEntityDiesProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override

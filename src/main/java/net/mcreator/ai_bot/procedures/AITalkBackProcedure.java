@@ -14,6 +14,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
@@ -25,6 +27,7 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
 import net.mcreator.ai_bot.network.AiBotModVariables;
+import net.mcreator.ai_bot.init.AiBotModEntities;
 import net.mcreator.ai_bot.init.AiBotModBlocks;
 import net.mcreator.ai_bot.AiBotMod;
 
@@ -80,7 +83,13 @@ public class AITalkBackProcedure {
 			} else if ((text).equals("Can you call me a self driving car?") || (text).equals("Can you call me a self driving car") || (text).equals("can you drive me a self driving car")) {
 				AiBotMod.queueServerWork(Mth.nextInt(RandomSource.create(), 4, 12), () -> {
 					if (!world.isClientSide() && world.getServer() != null)
-						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("I'm afraid it isn't availiable in your area yet! Please wait, it will be coming soon."), false);
+						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Sure! It will go wherever you look."), false);
+					if (world instanceof ServerLevel _level) {
+						Entity entityToSpawn = AiBotModEntities.MOBILITY_CAR.get().spawn(_level, BlockPos.containing(x + 4, y, z), MobSpawnType.MOB_SUMMONED);
+						if (entityToSpawn != null) {
+							entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+						}
+					}
 				});
 			} else if ((text).equals("Can you give me some art?") || (text).equals("Can you give me some art") || (text).equals("can you give me some art")) {
 				Random3 = Mth.nextInt(RandomSource.create(), 1, 3);

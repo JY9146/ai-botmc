@@ -213,6 +213,19 @@
           }
         ]
       }
+    },
+    {
+      "name": "CoordDetecter",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coord_detecter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ai_bot/procedures/CoordDetecterProcedure.java"
+        ],
+        "dependencies": []
+      }
     }
   ],
   "variable_elements": [
@@ -227,6 +240,24 @@
       "type": "logic",
       "scope": "world",
       "value": "true"
+    },
+    {
+      "name": "xcoord",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
+    },
+    {
+      "name": "ycoord",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
+    },
+    {
+      "name": "zcoord",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -297,7 +328,7 @@
   "workspaceSettings": {
     "modid": "ai_bot",
     "modName": "AI Bot",
-    "version": "1.0",
+    "version": "1.1",
     "description": "The future of artifical intelegence in our world, brought into Minecraft!",
     "author": "JY9146, MCreator",
     "websiteURL": "https://mcreator.net",

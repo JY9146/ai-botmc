@@ -129,6 +129,9 @@
       "value": ""
     },
     "entityDataEntries": [],
+    "whenMobDies": {
+      "name": "MobilityCarEntityDies"
+    },
     "onMobTickUpdate": {
       "name": "MobilityCarOnEntityTickUpdate"
     },
