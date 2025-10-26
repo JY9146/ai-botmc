@@ -110,6 +110,9 @@ public class AiBotModVariables {
 		}
 
 		public void read(CompoundTag nbt) {
+			if (nbt == null) {
+				nbt = save(new CompoundTag());
+			}
 		}
 
 		@Override

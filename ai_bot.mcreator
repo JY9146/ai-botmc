@@ -226,6 +226,28 @@
         ],
         "dependencies": []
       }
+    },
+    {
+      "name": "AIBotRecipeGiver",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ai_bot_recipe_giver",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/ai_bot/procedures/AIBotRecipeGiverProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
