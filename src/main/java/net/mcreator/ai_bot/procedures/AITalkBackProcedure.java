@@ -226,6 +226,26 @@ public class AITalkBackProcedure {
 							_level.addFreshEntity(entityToSpawn);
 						}
 					});
+				} else if (Random == 11) {
+					AiBotMod.queueServerWork(Mth.nextInt(RandomSource.create(), 4, 12), () -> {
+						if (!world.isClientSide() && world.getServer() != null)
+							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("Sure here is a" + ("\n" + "ENCHANTED GOLDEN APPLE"))), false);
+						if (world instanceof ServerLevel _level) {
+							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Items.PUFFERFISH));
+							entityToSpawn.setPickUpDelay(10);
+							_level.addFreshEntity(entityToSpawn);
+						}
+					});
+				} else if (Random == 12) {
+					AiBotMod.queueServerWork(Mth.nextInt(RandomSource.create(), 4, 12), () -> {
+						if (!world.isClientSide() && world.getServer() != null)
+							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("Sure here is a" + ("\n" + "BEACON"))), false);
+						if (world instanceof ServerLevel _level) {
+							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Blocks.ICE));
+							entityToSpawn.setPickUpDelay(10);
+							_level.addFreshEntity(entityToSpawn);
+						}
+					});
 				} else {
 					AiBotMod.queueServerWork(Mth.nextInt(RandomSource.create(), 4, 12), () -> {
 						if (!world.isClientSide() && world.getServer() != null)
