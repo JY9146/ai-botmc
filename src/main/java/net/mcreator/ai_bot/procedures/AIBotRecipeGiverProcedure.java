@@ -29,7 +29,7 @@ public class AIBotRecipeGiverProcedure {
 			return;
 		if (itemstack.getItem() == Blocks.IRON_BLOCK.asItem()) {
 			if (entity instanceof ServerPlayer _serverPlayer)
-				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("ai_bot:ai_bot_spawn_egg")});
+				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("ai_bot:ai_bot")});
 		}
 	}
 }
